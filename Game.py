@@ -18,7 +18,11 @@ class Game:
         pass
 
     def show_player_options(self):
-        pass
+        print("Make sure your opponent isn't watching and select your weapon!")
+        counter = 0
+        for weapon in self.weapons:
+            print('Press ' + str(counter) + ' to select ' + weapon)
+            counter +=1
 
     def display_winner(self):
         pass
