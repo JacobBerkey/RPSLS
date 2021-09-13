@@ -1,6 +1,10 @@
+from Human import Human
+from AI import AI
+
 class Game:
     def __init__(self):
-        pass
+        self.player1 = Human(3, "Human", "Human 1")
+        self.player2 = AI(3, "AI (Computer)", "Computer")
 
     def display_welcome(self):
         pass
@@ -14,4 +18,3 @@ class Game:
     def display_winner(self):
         pass
 
-    
