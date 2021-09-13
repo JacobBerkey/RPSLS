@@ -25,5 +25,8 @@ class Game:
             counter +=1
 
     def display_winner(self):
-        pass
+        if len(self.player1.lives) > len(self.player2.lives):
+            print('Player 1 wins!!')
+        else:
+            print('Player 2 wins!')
 
