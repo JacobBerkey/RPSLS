@@ -1,6 +1,4 @@
-class main:
-    def __init__(self):
-        pass
+from Game import Game
 
-    def run_game(self):
-        pass
+game = Game()
+game.run_game()
