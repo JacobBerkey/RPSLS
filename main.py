@@ -6,7 +6,7 @@ from Game import Game
 
 # * COMPLETE (15 points): As a developer, I want to find a way to properly incorporate inheritance into my game.
 
-# TODO (5 points): As a developer, I want to account for and handle bad user input, ensuring that any user input
+# COMPLETE (5 points): As a developer, I want to account for and handle bad user input, ensuring that any user input
 # is validated and reobtained if necessary.
 
 # * COMPLETE (10 points): As a developer, I want to store all of the gesture options/choices in a list. I want to find
