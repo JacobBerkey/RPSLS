@@ -6,7 +6,7 @@ class Human(Player):
         self.description = description
 
     def select_gesture(self):
-        print("Make sure your opponent isn't watching and select your weapon!")
+        print("Make sure your opponent isn't watching and type your gesture!")
         counter = 0
         for gesture in self.gesture_list:
             print("Press " + str(counter) + " to select " + gesture)
