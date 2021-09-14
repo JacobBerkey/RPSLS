@@ -9,22 +9,17 @@ class AI(Player):
 
     def select_gesture(self):
         
-        
         print(f"{self.description} is now computing its gesture selection!\n")
-
-
 
         counter = 0
         for gesture in self.gesture_list:
-    
-            
             if counter % 2 == 0:
                 print(f"Should I choose {self.gesture_list[counter]}?! **********")
                 print(" ")
             else:
                 print(f"Should I choose {self.gesture_list[counter]}?! ##########")
                 print(" ")
-            time.sleep(1)
+            time.sleep(.3)
             counter +=1
 
         print(f"I, {self.description} selected my gesture! Prepare to lose!\n")
