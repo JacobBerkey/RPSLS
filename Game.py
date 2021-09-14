@@ -18,11 +18,15 @@ class Game:
 
     def display_welcome(self):
         print("\nWelcome to Rock, Paper, Scissors, Lizard, Spock!\n")
-        player2 = int(input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?\n"))
-        if player2 == 1:
+        player2 = input("Will the second player be a human [Type 'one'] or [Type 'two'] to play against the computer ?\n").lower()
+        while player2 != "one" and player2 != "two":
+            player2 = input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?\n").lower()
+        if player2 == "one":
             self.player2 = Human(3, "Human 2")
-        if player2 == 2:
+        if player2 == "two":
             self.player2 = AI(3, "AI (The Computer)")
+
+
 
     def play_a_round(self):
         player1_gesture = self.player1.select_gesture()
