@@ -1,7 +1,7 @@
 from Human import Human
 from AI import AI
 from Player import Player
-import random
+
 
 
 class Game:
@@ -26,13 +26,8 @@ class Game:
             self.player2 = AI(3, "AI (The Computer)")
 
     def player_turn(self):
-        Human(Player).select_gesture()
-        player1_gesture = int(input("What gesture will Player 1 use"))
-        Human(Player).select_gesture()
-        if self.player2.type == "AI (Computer)":
-            player2_gesture = Player.gesture_list[random.randint(1, 5)]
-        elif self.player2.type == "Human":
-            player2_gesture = int(input("What gesture will Player 2 use?"))
+        player1_gesture = self.player1.select_gesture()
+        player2_gesture = self.player2.select_gesture()
         
         if player1_gesture == "Rock": 
             if player2_gesture == "Rock":
@@ -115,7 +110,7 @@ class Game:
                 self.player1.lives -= self.player1.lives
 
     def display_winner(self):
-        if len(self.player1.lives) > len(self.player2.lives):
+        if self.player1.lives > self.player2.lives:
             print('Player 1 wins!!')
         else:
             print('Player 2 wins!')
