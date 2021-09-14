@@ -17,9 +17,6 @@ class Game:
         while self.player1.lives > 0 and self.player2.lives > 0:
             self.player_turn()
 
-    def play_turn(self):
-        pass
-        
     def display_welcome(self):
         print("Welcome to Rock, Paper, Scissors, Lizard, Spock!")
         player2 = int(input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?"))
