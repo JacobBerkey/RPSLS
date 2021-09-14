@@ -1,3 +1,6 @@
 class Player:
-    def __init__(self):
-         self.gesture_list = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+    def __init__(self, gesture_list):
+         self.gesture_list = gesture_list["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+
+    
+        
