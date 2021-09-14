@@ -11,14 +11,15 @@ class Game:
         self.display_winner()
 
     def play_game(self):
-        pass
+        while self.player1.lives > 0 and self.player2.lives > 0:
+            self.player_turn()
 
     def play_turn(self):
         pass
         
     def display_welcome(self):
         print("Welcome to Rock, Paper, Scissors, Lizard, Spock!")
-        player2 = int(input("Will the second player be a human [Press 1] or [Press 2] to play against the computer ?"))
+        player2 = int(input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?"))
         if player2 == 1:
             self.player2 = Human(3, "Human 2")
         if player2 == 2:
