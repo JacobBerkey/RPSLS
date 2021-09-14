@@ -20,7 +20,7 @@ class Game:
         print("\nWelcome to Rock, Paper, Scissors, Lizard, Spock!\n")
         player2 = input("Will the second player be a human [Type 'one'] or [Type 'two'] to play against the computer ?\n").lower()
         while player2 != "one" and player2 != "two":
-            player2 = input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?\n").lower()
+            player2 = input("Will the second player be a human [Type 'one'] or [Type 'two'] to play against the computer ?\n").lower()
         if player2 == "one":
             self.player2 = Human(3, "Human 2")
         if player2 == "two":
