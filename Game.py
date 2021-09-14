@@ -1,6 +1,5 @@
 from Human import Human
 from AI import AI
-import random
 
 class Game:
     def __init__(self):
