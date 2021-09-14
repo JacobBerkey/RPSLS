@@ -1,8 +1,6 @@
 from Human import Human
 from AI import AI
-from Player import Player
-
-
+import random
 
 class Game:
     def __init__(self):
@@ -14,18 +12,19 @@ class Game:
         self.display_winner()
 
     def play_game(self):
-        while self.player1.lives > 0 and self.player2.lives > 0:
-            self.player_turn()
+        while (self.player1.lives > 0 and self.player2.lives) > 0:
+            self.play_a_round()
+
 
     def display_welcome(self):
-        print("Welcome to Rock, Paper, Scissors, Lizard, Spock!")
-        player2 = int(input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?"))
+        print("\nWelcome to Rock, Paper, Scissors, Lizard, Spock!\n")
+        player2 = int(input("Will the second player be a human [Type '1'] or [Type '2'] to play against the computer ?\n"))
         if player2 == 1:
             self.player2 = Human(3, "Human 2")
         if player2 == 2:
             self.player2 = AI(3, "AI (The Computer)")
 
-    def player_turn(self):
+    def play_a_round(self):
         player1_gesture = self.player1.select_gesture()
         player2_gesture = self.player2.select_gesture()
         
@@ -109,9 +108,12 @@ class Game:
                 print(f"{self.player2.description} beats {self.player1.description} since {player2_gesture} poisons {player1_gesture}!")
                 self.player1.lives -= self.player1.lives
 
+        print(f"Player 1 ({self.player1.description}) now has {self.player1.lives} lives left and Player 2 ({self.player2.description}) now has {self.player2.lives} lives left")
+
     def display_winner(self):
-        if self.player1.lives > self.player2.lives:
-            print('Player 1 wins!!')
-        else:
-            print('Player 2 wins!')
+        if self.player1.lives == 0 or self.player2.lives == 0:
+            if self.player1.lives > self.player2.lives:
+                print('Player 1 wins!!')
+            else:
+                print('Player 2 wins!')
 
